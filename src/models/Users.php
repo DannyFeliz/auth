@@ -407,7 +407,7 @@ class Users extends \Phalcon\Mvc\Model
     {
         //cant use it aas a object property cause php sucks and can call a function on a property with a array -_-
         $options = [
-            'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM), // Never use a static salt or one that is not randomly generated.
+            //'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM), // Never use a static salt or one that is not randomly generated.
             'cost' => 12, // the default cost is 10
         ];
 
@@ -426,7 +426,7 @@ class Users extends \Phalcon\Mvc\Model
     public function passwordNeedRehash($password)
     {
         $options = [
-            'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM), // Never use a static salt or one that is not randomly generated.
+            //'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM), // Never use a static salt or one that is not randomly generated.
             'cost' => 12, // the default cost is 10
         ];
 
